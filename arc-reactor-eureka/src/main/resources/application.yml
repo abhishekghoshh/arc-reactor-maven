@@ -1,0 +1,15 @@
+server:
+  port: 8761
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled: false
+  application:
+    name: arc-reactor-digital
+  config:
+    name: arc-reactor-eureka
+    use-legacy-processing: true
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
