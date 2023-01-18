@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tutorial</groupId>
-	<artifactId>spring-reddis-example</artifactId>
+	<artifactId>arc-reactor-redis</artifactId>
 	<version>1.0.0</version>
-	<name>spring-reddis-example</name>
+	<name>arc-reactor-redis</name>
 	<description>Tutorial for Spring reddis</description>
 
 	<properties>

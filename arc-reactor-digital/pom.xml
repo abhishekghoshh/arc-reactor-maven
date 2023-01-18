@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.github.typicalitguy</groupId>
-	<artifactId>ARC_REACTOR_DIGITAL</artifactId>
+	<artifactId>arc-reactor-digital</artifactId>
 	<version>1.0.0</version>
-	<name>ARC_REACTOR_DIGITAL</name>
+	<name>arc-reactor-digital</name>
 	<description>Digital layer ARC_REACTOR Microservice</description>
 	<properties>
 		<java.version>11</java.version>
