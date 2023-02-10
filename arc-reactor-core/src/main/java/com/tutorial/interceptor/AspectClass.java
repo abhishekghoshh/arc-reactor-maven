@@ -1,4 +1,4 @@
-package com.tutorial.interceptor.custom;
+package com.tutorial.interceptor;
 
 import java.lang.reflect.Method;
 

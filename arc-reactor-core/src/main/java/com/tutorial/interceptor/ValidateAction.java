@@ -1,4 +1,4 @@
-package com.tutorial.interceptor.custom;
+package com.tutorial.interceptor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

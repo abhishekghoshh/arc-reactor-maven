@@ -1,10 +1,11 @@
-package com.tutorial.model;
+package com.tutorial.interceptor;
 
 public class User {
+
 	private String name;
 	private int age;
 	private String gender;
-	
+
 	public User() {
 		super();
 	}
@@ -39,5 +40,6 @@ public class User {
 	public void setGender(String gender) {
 		this.gender = gender;
 	};
-	
+
+
 }
