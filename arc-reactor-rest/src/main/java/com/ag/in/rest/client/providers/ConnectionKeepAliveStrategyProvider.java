@@ -9,24 +9,21 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
-
 @Configuration
 public class ConnectionKeepAliveStrategyProvider {
-    private static final long DEFAULT_SECONDS = 30;
+	private static final long DEFAULT_SECONDS = 30;
 
-    public ConnectionKeepAliveStrategy connectionKeepAliveStrategy() {
-        return (HttpResponse httpResponse, HttpContext context) -> {
-            HeaderElementIterator it = new BasicHeaderElementIterator
-                    (httpResponse.headerIterator(HTTP.CONN_KEEP_ALIVE));
-            while (it.hasNext()) {
-                HeaderElement headerElement = it.nextElement();
-                if (headerElement.getName().equalsIgnoreCase("timeout") &&
-                        null != headerElement.getValue()) {
-                    return Long.parseLong(headerElement.getValue()) * 1000;
-                }
-            }
-            return DEFAULT_SECONDS;
-        };
-    }
+	public ConnectionKeepAliveStrategy connectionKeepAliveStrategy() {
+		return (HttpResponse httpResponse, HttpContext context) -> {
+			HeaderElementIterator it = new BasicHeaderElementIterator(
+					httpResponse.headerIterator(HTTP.CONN_KEEP_ALIVE));
+			while (it.hasNext()) {
+				HeaderElement headerElement = it.nextElement();
+				if (headerElement.getName().equalsIgnoreCase("timeout") && null != headerElement.getValue()) {
+					return Long.parseLong(headerElement.getValue()) * 1000;
+				}
+			}
+			return DEFAULT_SECONDS;
+		};
+	}
 }
